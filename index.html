@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101316">
+  <meta name="description" content="Austin Concepcion's portfolio: software engineering, machine learning, and data analysis projects.">
+  <title>Austin Concepcion — Software & Data Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101316'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='37' font-weight='bold' fill='%23f27769'%3EA%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{color-scheme:dark;--ink:#f0f0ed;--sub:#abb0b5;--line:#2c3238;--paper:#101316;--white:#1a1e22;--lime:#f27769;--blue:#f27769}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:3px solid var(--blue);outline-offset:4px;border-radius:2px}
+    .wrap{width:min(1030px,calc(100% - 48px));margin:auto}
+    .nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:13px;font-size:15px;font-weight:800;letter-spacing:-.025em}
+    .mark{width:33px;height:33px;background:#282e34;color:var(--lime);display:grid;place-items:center;border-radius:8px;font-weight:800;font-size:16px}
+    .navlinks{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:700}
+    .navlinks a:hover,.text-link:hover{color:var(--blue)}
+    .hero{background:radial-gradient(circle at 78% 23%,rgba(242,119,105,.075) 0 1px,transparent 2px),radial-gradient(circle at 56% 82%,rgba(242,119,105,.16) 0 1px,transparent 2px),var(--paper);background-size:188px 149px,273px 217px,auto;color:var(--ink);overflow:hidden}
+    .hero-grid{min-height:440px;padding:100px 0 100px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,.4fr);align-items:end;gap:40px}
+    .eyebrow{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.10em;text-transform:uppercase}
+    h1{font-size:clamp(44px,6vw,73px);line-height:1.09;letter-spacing:-.057em;margin:22px 0 24px;max-width:780px}
+    .hero p{color:#b2b7bb;max-width:620px;font-size:18px;line-height:1.65;margin:0}
+    .hero-aside{border-left:1px solid var(--line);padding-left:23px;color:var(--sub);font-size:15px}
+    .hero-aside strong{display:block;color:var(--ink);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+    .hero-aside p{font-size:15px;line-height:1.6;color:var(--sub)}
+    .hero-aside a{display:inline-block;margin-top:18px;padding-bottom:4px;border-bottom:1px solid var(--blue);color:var(--blue);font-weight:700}
+    main{padding:60px 0 100px;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:0 0 24px}
+    .section-head h2{font-size:clamp(29px,3.4vw,41px);letter-spacing:-.045em;line-height:1.1;margin:0}
+    .section-head p{font-size:14px;color:var(--sub);margin:0;max-width:380px}
+    .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:32px;display:flex;flex-direction:column;min-height:412px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .card:hover{transform:translateY(-3px);border-color:#705052;box-shadow:0 15px 32px rgba(0,0,0,.18)}
+    .card-top{display:flex;justify-content:space-between;align-items:start;gap:20px}
+    .number{font-size:13px;color:var(--sub);font-weight:800;letter-spacing:.13em}
+    .badge{font-size:12px;line-height:1.2;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:#302527;color:#e9978d;padding:7px 9px;border-radius:20px}
+    .card h3{font-size:clamp(25px,2.8vw,37px);letter-spacing:-.05em;line-height:1.15;margin:45px 0 14px}
+    .card p{color:#b0b6bb;margin:0;max-width:440px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0 29px}
+    .tags span{font-size:13px;color:#c4c9cc;border:1px solid #3a4147;background:#24292e;border-radius:4px;padding:5px 8px}
+    .actions{display:flex;gap:22px;flex-wrap:wrap;margin-top:auto;font-size:14px;font-weight:800}
+    .actions a{border-bottom:2px solid var(--lime);color:var(--lime);padding-bottom:2px}
+    .actions a:hover{color:var(--blue);border-color:var(--blue)}
+    .card--feature{background:#1c2024;border-color:#3b3535}
+    .card--feature p{color:#b0b6bb}.card--feature .badge{background:#302527;color:#e9978d}.card--feature .tags span{border-color:#3a4147;color:#c4c9cc}
+    .pipeline{margin-top:74px}
+    .pipeline .section-head{margin-bottom:22px}
+    .pipeline-list{border-top:1px solid var(--line)}
+    .pipeline-item{display:grid;grid-template-columns:45px minmax(200px,1fr) minmax(250px,1.6fr) 104px;gap:22px;align-items:center;padding:29px 0;border-bottom:1px solid var(--line)}
+    .pipeline-item .idx{font-size:13px;color:var(--sub);font-weight:800}
+    .pipeline-item h3{margin:0;font-size:20px;line-height:1.25;letter-spacing:-.035em}
+    .pipeline-item p{margin:0;color:var(--sub);font-size:15px}
+    .status{font-size:12px;letter-spacing:.05em;text-transform:uppercase;font-weight:800;color:#586374;text-align:right}
+    .about{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;padding:72px 0 0;margin-top:80px;border-top:1px solid var(--line)}
+    .about h2{font-size:clamp(29px,3.4vw,41px);letter-spacing:-.05em;margin:0}
+    .about p{margin:0 0 17px;color:#b0b6bb;font-size:17px}
+    .about .minor{font-size:14px;color:#89939d}
+    footer{background:var(--paper);color:var(--ink);padding:36px 0;border-top:1px solid var(--line)}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .foot strong{font-size:20px;letter-spacing:-.04em}
+    .foot a{color:var(--blue);font-size:15px;font-weight:700;border-bottom:1px solid currentColor}
+    .section-head h2::before,.about h2::before{content:attr(data-number);display:inline-block;vertical-align:middle;margin-right:17px;color:var(--lime);font-size:13px;font-weight:800;letter-spacing:.04em}
+    .pipeline-item h3{color:#e8e9e9}
+    .status{color:#c98981}
+    .skill-bands{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:80px}
+    .skill-band{border:1px solid var(--line);background:var(--white);border-radius:10px;padding:25px 27px}
+    .skill-band h3{font-size:14px;text-transform:uppercase;letter-spacing:.11em;color:var(--lime);margin:0 0 15px}
+    .skill-band p{color:#c0c5c8;font-size:15px;line-height:1.8;margin:0}
+    @media(max-width:780px){.hero-grid{grid-template-columns:1fr;gap:34px;padding:53px 0}.hero-aside{max-width:480px}.work-grid,.skill-bands{grid-template-columns:1fr}.card{min-height:330px}.pipeline-item{grid-template-columns:35px 1fr;gap:8px 13px}.pipeline-item p{grid-column:2}.status{grid-column:2;text-align:left;margin-top:5px}.about{grid-template-columns:1fr;gap:24px}.section-head{align-items:start;flex-direction:column;gap:8px}}
+    @media(max-width:520px){.wrap{width:calc(100% - 32px)}.nav{height:68px}.navlinks{gap:15px}.navlinks a{font-size:13px}.navlinks a:first-child{display:none}.hero-grid{min-height:auto;padding:47px 0 55px}h1{font-size:clamp(43px,11vw,62px);margin:20px 0}.hero p{font-size:16px}.hero-aside{padding-left:15px}.card{padding:23px;min-height:360px}.card h3{margin-top:36px}.foot{align-items:start;flex-direction:column}.pipeline{margin-top:61px}.about{margin-top:57px;padding-top:57px}main{padding-top:57px;padding-bottom:72px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#top" aria-label="Austin Concepcion, back to top"><span class="mark" aria-hidden="true">A</span> Austin Concepcion</a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="mailto:concepcionraymondaustin@gmail.com">Contact ↗</a></nav>
+  </header>
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div><div class="eyebrow">Hi, I'm Austin Concepcion</div><h1>Software, data, and the questions behind them.</h1><p>I’m a Computer Science student at the University of Santo Tomas. I build practical web applications and explore what we can learn from data.</p></div>
+      <div class="hero-aside"><strong>Currently exploring</strong><p>Data analysis and science internships, as well as software engineering opportunities.</p><a href="#work">See selected work ↘</a></div>
+    </div>
+  </section>
+  <main class="wrap">
+    <section id="work" aria-labelledby="work-title">
+      <div class="section-head"><h2 id="work-title" data-number="01">Selected work</h2><p>Projects I can show today, including a team project for a real client and ongoing research.</p></div>
+      <div class="work-grid">
+        <article class="card card--feature">
+          <div class="card-top"><span class="number">01 / SOFTWARE</span><span class="badge">Client team project</span></div>
+          <h3>Theresa Shoes</h3><p>A custom shoe ordering app where customers can browse the catalog and submit orders. An admin panel supports orders, payments, companies, and catalog management.</p>
+          <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Full stack</span></div>
+          <div class="actions"><a href="https://web-kappa-two-18.vercel.app" target="_blank" rel="noopener noreferrer">Explore demo ↗</a><a href="https://github.com/Kyanqueso/theresa_shoes_app/tree/demo" target="_blank" rel="noopener noreferrer">Team repository ↗</a></div>
+        </article>
+        <article class="card">
+          <div class="card-top"><span class="number">02 / RESEARCH</span><span class="badge">Ongoing thesis</span></div>
+          <h3>Taglish review sentiment</h3><p>Research on detecting customer dissatisfaction in Filipino-English e-commerce reviews using XLM-RoBERTa. Our team curated over 10,000 reviews and is developing dissatisfaction categories.</p>
+          <div class="tags"><span>Python</span><span>NLP</span><span>XLM-RoBERTa</span><span>Research</span></div>
+          <div class="actions"><a href="mailto:concepcionraymondaustin@gmail.com?subject=Taglish%20thesis%20inquiry">Ask about the research ↗</a></div>
+        </article>
+      </div>
+    </section>
+    <section class="pipeline" aria-labelledby="pipeline-title">
+      <div class="section-head"><h2 id="pipeline-title" data-number="02">Data projects in progress</h2><p>Each case study will follow a business question, analysis, findings, and a recommendation.</p></div>
+      <div class="pipeline-list">
+        <div class="pipeline-item"><span class="idx">03</span><h3>Customer churn</h3><p>Explore who leaves a subscription service, build a Python model, and estimate the value of retention.</p><span class="status">Planned</span></div>
+        <div class="pipeline-item"><span class="idx">04</span><h3>Marketing campaigns</h3><p>Compare clicks, leads, and acquisition costs across campaigns in an interactive dashboard.</p><span class="status">Planned</span></div>
+        <div class="pipeline-item"><span class="idx">05</span><h3>Patient readmission</h3><p>Analyze readmission patterns and make the results easier to explore in a dashboard.</p><span class="status">Planned</span></div>
+      </div>
+    </section>
+    <section class="skill-bands" aria-label="Skills"><div class="skill-band"><h3>Data &amp; machine learning</h3><p>Python · pandas · scikit-learn · SQL · Power BI · Tableau · Excel</p></div><div class="skill-band"><h3>Software development</h3><p>React · JavaScript · FastAPI · PostgreSQL · Git · GitHub</p></div></section>
+    <section class="about" id="about" aria-labelledby="about-title"><h2 id="about-title" data-number="03">A little about me</h2><div><p>I’m a fourth-year BS Computer Science student specializing in Data Science at UST. I like taking a question from messy data or an unfinished product idea to something people can use and understand.</p><p>My current focus is sharpening my Python, Excel, and dashboard skills while continuing to build software with teams.</p><p class="minor">Quezon City, Philippines · Open to internship opportunities</p></div></section>
+  </main>
+  <footer><div class="wrap foot"><strong>Let’s work on something useful.</strong><a href="mailto:concepcionraymondaustin@gmail.com">concepcionraymondaustin@gmail.com ↗</a></div></footer>
+</body>
+</html>
