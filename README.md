@@ -1,19 +1,38 @@
 # Austin Concepcion | Portfolio
 
-Static HTML, CSS, and JavaScript. No install or build step.
+A personal portfolio for my software development, data science, and analytics work. It features project pages that explain the question behind each project, my approach, and the outcome or current progress.
 
-## Upload to GitHub
+## Featured work
 
-Extract the ZIP, then upload **all** HTML files, `styles.css`, `script.js`, and this README to the root of `Craezyyy/MyPortfolio`. Replace older files when prompted. Commit the changes. The project detail pages use links to other files in the same folder, so keep them together.
+| Project | What it covers | Status |
+| --- | --- | --- |
+| [Theresa Shoes](theresa-shoes.html) | Client-based inventory and sales system, plus a public ordering app demo | Client project |
+| [Taglish Review Research](taglish-reviews.html) | Detecting customer dissatisfaction in Filipino-English e-commerce reviews with XLM-RoBERTa | Ongoing thesis |
+| [ShopZada Data Warehouse](shopzada.html) | ETL pipelines, dimensional modeling, and e-commerce reporting | Team project |
 
-If you use Git on your computer instead: `git add .`, `git commit -m "Update portfolio"`, then `git push origin main`.
+I’m also developing case studies on [patient readmission](patient-readmission.html), [subscription customer churn](customer-churn.html), and [marketing campaign performance](marketing-campaigns.html). These are clearly labeled as planned until the analyses and findings are complete.
 
-## Vercel
+## Built with
 
-Import the repository in Vercel, or connect it under Settings > Git for an existing project. Use the default static configuration, with no build command. Subsequent commits update the connected site.
+- HTML, CSS, and JavaScript
+- Responsive layouts and subtle pointer interactions
+- Project filters and individual project pages
+- No framework, external dependencies, or build step
 
-## Editing
+## Run locally
 
-Change text directly in `index.html` and the individual project pages. Colors and layout are in `styles.css`; hover interaction and filters are in `script.js`.
+Open `index.html` in a browser. For a local server, run:
 
-The three planned data case studies are marked as planned. Replace their descriptions and findings as the work is completed.
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Deployment
+
+This is a static site that can be deployed on Vercel from this repository. The entry point is `index.html`; no build command is needed.
+
+## Contact
+
+[Email me](mailto:concepcionraymondaustin@gmail.com) · [GitHub](https://github.com/Craezyyy)
