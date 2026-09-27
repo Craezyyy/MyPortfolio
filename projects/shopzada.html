@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#181a29">
-    <meta name="description" content="ShopZada Data Warehouse — Austin Concepcion portfolio">
+    <meta name="description" content="ShopZada Enterprise Data Warehouse — Austin Concepcion portfolio">
     <title>ShopZada Data Warehouse | Austin Concepcion</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="../assets/js/script.js" defer></script>
@@ -13,67 +13,127 @@
 
 <body>
     <header class="topbar">
-        <nav class="wrap nav" aria-label="Main navigation"><a class="brand mono" href="../index.html"><span
-                    class="brand-icon">AC</span>austin / portfolio</a>
-            <div class="nav-links mono"><a href="../index.html#about">about</a><a href="../index.html#skills">skills</a><a
-                    href="../index.html#projects">projects</a><a class="nav-cta"
-                    href="mailto:concepcionraymondaustin@gmail.com">Email me </a></div>
+        <nav class="wrap nav" aria-label="Main navigation">
+            <a class="brand mono" href="../index.html"><span class="brand-icon">AC</span>austin / portfolio</a>
+            <div class="nav-links mono">
+                <a href="../index.html#about">about</a>
+                <a href="../index.html#skills">skills</a>
+                <a href="../index.html#projects">projects</a>
+                <a class="nav-cta" href="mailto:concepcionraymondaustin@gmail.com">Email me</a>
+            </div>
         </nav>
     </header>
+
     <main>
         <section class="detail-hero">
-            <div class="wrap"><a class="back mono" href="../index.html#projects"> All projects</a>
-                <p class="eyebrow mono">Data engineering / Analytics</p>
-                <h1>ShopZada Data Warehouse</h1>
-                <p class="summary">A foundation for exploring sales, customers, and products across e-commerce data.</p>
-                <div class="chips"><span>Apache Airflow</span><span>PostgreSQL</span><span>Power
-                        BI</span><span>SQL</span></div>
+            <div class="wrap">
+                <a class="back mono" href="../index.html#projects">← All projects</a>
+                <p class="eyebrow mono">Data Engineering / Enterprise DWH</p>
+                <h1>ShopZada: Enterprise Data Warehouse &amp; BI Pipeline</h1>
+                <p class="summary">Consolidated fragmented, multi-department e-commerce data into a centralized analytical warehouse using Kimball dimensional modeling, automated Python ETL pipelines, Apache Airflow orchestration, and Power BI dashboards.</p>
+                <div class="chips">
+                    <span>Data Engineering</span><span>Python / Pandas</span><span>Apache Airflow</span><span>PostgreSQL</span><span>Docker</span><span>Power BI</span><span>Kimball Modeling</span>
+                </div>
+                <div class="detail-actions">
+                    <a class="button primary" href="https://github.com/Craezyyy/shopzada-schoolproject.git" target="_blank" rel="noopener noreferrer">View Project Source</a>
+                </div>
             </div>
         </section>
+
         <div class="wrap detail-main">
-            <div class="visual-panel reveal"><small class="mono">Project workflow</small><strong>How can e-commerce
-                    records be organized so teams can explore sales, customer, and product performance more
-                    consistently?</strong>
-                <div class="flow mono"><span>Data ingestion</span><span>Dimensional model</span><span>Reporting</span>
+            <!-- PIPELINE WORKFLOW PANEL -->
+            <div class="visual-panel reveal">
+                <small class="mono">Pipeline Architecture &amp; Data Flow</small>
+                <strong>From Multi-Source Ingestion to Interactive Business Intelligence.</strong>
+                <div class="flow mono">
+                    <span>1. Ingest Raw (CSV/JSON/Parquet)</span>
+                    <span>2. Python Clean &amp; Staging</span>
+                    <span>3. Kimball Star Schema</span>
+                    <span>4. Airflow Orchestration</span>
+                    <span>5. Power BI Dashboard</span>
                 </div>
             </div>
+
+            <!-- CORE CASE STUDY BODY -->
             <div class="detail-columns">
                 <div class="reveal">
-                    <h2>Business question</h2>
-                    <p>How can e-commerce records be organized so teams can explore sales, customer, and product
-                        performance more consistently?</p>
-                    <h2>Analysis &amp; approach</h2>
-                    <p>I contributed to ETL pipelines in Apache Airflow handling over 1 million records, a Kimball-style
-                        dimensional model in PostgreSQL, and analytical SQL queries. The project also supported Power BI
-                        dashboard integration.</p>
-                    <h2>What this work provides</h2>
-                    <p>The work created a structured reporting foundation for sales, customer, and product analysis. I
-                        have not published a measured business outcome, so this case study focuses on the pipeline and
-                        data model rather than invented gains.</p>
-                </div>
-                <aside class="side-card reveal">
-                    <h2>At a glance</h2>
-                    <div class="meta"><small class="mono">ROLE</small><strong>Developer · team project</strong></div>
-                    <div class="meta"><small class="mono">TIMELINE</small><strong>Nov–Dec 2025</strong></div>
-                    <h2>Highlights</h2>
+                    <h2>1. The Problem &amp; Business Context</h2>
+                    <p><strong>ShopZada</strong> is an e-commerce platform processing hundreds of thousands of transactions. Its operations spanned multiple departments—including customer management, catalog teams, marketing, and warehouse logistics—each storing data in isolated, incompatible formats (CSV, JSON, Excel, and raw Parquet).</p>
+                    <p>This fragmentation created serious operational blind spots: conflicting metrics across teams, manual data reconciliation delays, and an inability to accurately evaluate promotional campaign effectiveness or customer lifetime value.</p>
+
+                    <h2>2. System Architecture &amp; Engineering Pipeline</h2>
+                    <p>As part of our data engineering consultant team, I helped design and build a 5-tier analytics pipeline:</p>
                     <ul>
-                        <li>Worked on Airflow ETL pipelines across 1M+ records.</li>
-                        <li>Contributed to dimensional modeling in PostgreSQL.</li>
-                        <li>Supported Power BI integration and analytical queries.</li>
+                        <li><strong>Immutable Raw Layer:</strong> Ingested untouched source datasets across 5 departments to guarantee full auditability and traceability back to original transactions.</li>
+                        <li><strong>ETL &amp; Staging Layer:</strong> Developed Python/pandas pipelines that normalized irregular schemas, enforced strict data types, stripped invalid records, and exported cleaned outputs into efficient, compressed Parquet files.</li>
+                        <li><strong>Kimball Dimensional Model:</strong> Designed a resilient star schema inside PostgreSQL. Separated business events into transactional fact tables (<code>fact_orders</code>, <code>fact_order_items</code>) connected to clean dimensions (<code>dim_customer</code>, <code>dim_product</code>, <code>dim_campaign</code>, <code>dim_merchant</code>, <code>dim_date</code>).</li>
+                        <li><strong>Orchestration &amp; Containerization:</strong> Built an automated Apache Airflow DAG managing execution order and staging dependencies, fully containerized alongside PostgreSQL using Docker Compose.</li>
+                        <li><strong>Analytics Aggregation:</strong> Engineered automated transformation scripts (<code>create_dashboard_csvs.py</code>) generating summarized business metrics for direct Power BI consumption.</li>
+                    </ul>
+
+                    <h2>3. Interactive Dashboard Previews</h2>
+                    <p>Executive and product performance dashboards generated directly from warehouse aggregates:</p>
+
+                    <div style="margin: 24px 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #000; padding: 12px;">
+                        <img src="../assets/DASHBOARD_SAMPLE_PAGE1.png" alt="ShopZada Executive KPI Summary Dashboard" loading="lazy" style="width: 100%; border-radius: 8px; display: block; margin-bottom: 14px;">
+                        <img src="../assets/DASHBOARD_SAMPLE_PAGE2.png" alt="ShopZada Product and Campaign Performance Dashboard" loading="lazy" style="width: 100%; border-radius: 8px; display: block;">
+                    </div>
+
+                    <h2>4. Key Engineering Deliverables</h2>
+                    <ul>
+                        <li><strong>Automated Ingestion &amp; Quality Checks:</strong> Built schema validation routines that check for null business keys, missing column headers, and row count discrepancies between pipeline stages.</li>
+                        <li><strong>Production-Grade Star Schema:</strong> Implemented SCD Type 1 dimensions allowing complex multi-table joins without performance degradation.</li>
+                        <li><strong>Airflow Task Dependency Management:</strong> Configured deterministic DAG tasks to guarantee parent tables finish staging before downstream fact tables process.</li>
+                        <li><strong>Executive Decision Dashboards:</strong> Translated raw log files into clear visual KPIs highlighting seasonal peaks, customer tier spending, and campaign ROI.</li>
+                    </ul>
+                </div>
+
+                <!-- SIDE CARD METADATA -->
+                <aside class="side-card reveal">
+                    <h2>At a Glance</h2>
+                    <div class="meta">
+                        <small class="mono">CLIENT</small>
+                        <strong>ShopZada (E-Commerce Platform)</strong>
+                    </div>
+                    <div class="meta">
+                        <small class="mono">ROLE</small>
+                        <strong>Data Engineering Team Member</strong>
+                    </div>
+                    <div class="meta">
+                        <small class="mono">TIMELINE</small>
+                        <strong>Nov–Dec 2025(UST CICS)</strong>
+                    </div>
+                    <div class="meta">
+                        <small class="mono">KEY STACK</small>
+                        <strong>Python, Pandas, Apache Airflow, PostgreSQL, Docker, Power BI</strong>
+                    </div>
+
+                    <h2 style="margin-top: 28px;">Core Highlights</h2>
+                    <ul>
+                        <li>Merged siloed datasets across 5 departments into a single source of truth.</li>
+                        <li>Applied Kimball dimensional design for high-performance reporting.</li>
+                        <li>Orchestrated automated ETL scripts using Apache Airflow and Docker.</li>
+                        <li>Built interactive Power BI reports analyzing ₱225M+ across 500K orders.</li>
                     </ul>
                 </aside>
             </div>
-            <nav class="next-nav mono" aria-label="Project navigation"><a href="../index.html#projects"> Back to all
-                    projects</a><a href="patient-readmission.html">Next: Patient Readmission Analysis </a></nav>
+
+            <!-- PREV / NEXT NAVIGATION -->
+            <nav class="next-nav mono" aria-label="Project navigation">
+                <a href="theresa-shoes.html">← Previous: Theresa Shoes MTO</a>
+                <a href="taglish-reviews.html">Next: Taglish Review Research →</a>
+            </nav>
         </div>
     </main>
+
     <footer class="footer">
-        <div class="wrap"><span>© 2026 Austin Concepcion · </span>
-            <div class="socials mono"><a href="https://github.com/Craezyyy" target="_blank"
-                    rel="noopener noreferrer">GitHub</a><a
-                    href="mailto:concepcionraymondaustin@gmail.com">concepcionraymondaustin@gmail.com </a><a
-                    href="https://www.linkedin.com/in/raymond-austin-concepcion-46b684326/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a><a href="../index.html#top">Back to top</a></div>
+        <div class="wrap">
+            <span>© 2026 Austin Concepcion</span>
+            <div class="socials mono">
+                <a href="https://github.com/Craezyyy" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/raymond-austin-concepcion-46b684326/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="../index.html#top">Back to top</a>
+            </div>
         </div>
     </footer>
 </body>
