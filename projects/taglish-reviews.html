@@ -13,73 +13,76 @@
 
 <body>
     <header class="topbar">
-        <nav class="wrap nav" aria-label="Main navigation"><a class="brand mono" href="../index.html"><span
-                    class="brand-icon">AC</span>austin / portfolio</a>
-            <div class="nav-links mono"><a href="../index.html#about">about</a><a href="../index.html#skills">skills</a><a
-                    href="../index.html#projects">projects</a><a class="nav-cta"
-                    href="mailto:concepcionraymondaustin@gmail.com">Email me </a></div>
+        <nav class="wrap nav" aria-label="Main navigation">
+            <a class="brand mono" href="../index.html"><span class="brand-icon">AC</span>austin / portfolio</a>
+            <div class="nav-links mono">
+                <a href="../index.html#about">about</a>
+                <a href="../index.html#skills">skills</a>
+                <a href="../index.html#projects">projects</a>
+                <a class="nav-cta" href="mailto:concepcionraymondaustin@gmail.com">Email me</a>
+            </div>
         </nav>
     </header>
     <main>
         <section class="detail-hero">
-            <div class="wrap"><a class="back mono" href="../index.html#projects"> All projects</a>
-                <p class="eyebrow mono">Research / NLP</p>
-                <h1>Taglish Review Research</h1>
-                <p class="summary">Finding signals of customer dissatisfaction in code-switched Filipino-English product
-                    reviews.</p>
+            <div class="wrap">
+                <a class="back mono" href="../index.html#projects">← All projects</a>
+                <p class="eyebrow mono">Undergraduate Thesis / NLP Research</p>
+                <h1>Sentiment-Based Detection of Customer Dissatisfaction in Code-Switched Taglish E-Commerce Reviews Using XLM-RoBERTa</h1>
+                <p class="summary">Fine-tuning cross-lingual transformer models to identify genuine customer dissatisfaction and multi-label complaint types in code-switched Filipino-English Shopee reviews.</p>
                 <div class="chips">
-                    <span>Python</span><span>scikit-learn</span><span>Transformers</span><span>XLM-RoBERTa</span></div>
-                <div class="detail-actions"><a class="button primary"
-                        href="mailto:concepcionraymondaustin@gmail.com?subject=Taglish%20thesis%20inquiry">Ask me about
-                        the research </a></div>
+                    <span>Python</span><span>scikit-learn</span><span>Transformers</span><span>XLM-RoBERTa</span><span>PyTorch</span><span>Apache Airflow</span>
+                </div>
+                <div class="detail-actions">
+                    <a class="button primary" href="mailto:concepcionraymondaustin@gmail.com?subject=Taglish%20thesis%20inquiry">Ask me about the research</a>
+                </div>
             </div>
         </section>
         <div class="wrap detail-main">
-            <div class="visual-panel reveal"><small class="mono">Project workflow</small><strong>Can a language model
-                    detect dissatisfaction in Taglish e-commerce reviews, including concerns that may be missed by a
-                    simple positive/negative label?</strong>
-                <div class="flow mono"><span>10K+ reviews</span><span>Annotation</span><span>Model evaluation</span>
-                </div>
+            <div class="visual-panel reveal">
+                <small class="mono">Two-Stage Pipeline Architecture</small>
+                <strong>Filtering noise and classifying sentiment polarity in Stage 1, followed by multi-label dissatisfaction categorization in Stage 2.</strong>
+                <div class="flow mono"><span>10.5K+ Taglish Reviews</span><span>Noise &amp; Sarcasm Filtering</span><span>XLM-R Sentiment Stage</span><span>Multi-Label Dissatisfaction Stage</span></div>
             </div>
             <div class="detail-columns">
                 <div class="reveal">
-                    <h2>Business question</h2>
-                    <p>Can a language model detect dissatisfaction in Taglish e-commerce reviews, including concerns
-                        that may be missed by a simple positive/negative label?</p>
-                    <h2>Analysis &amp; approach</h2>
-                    <p>Our team curated and annotated more than 10,000 Taglish reviews. We are fine-tuning XLM-RoBERTa
-                        and benchmarking it against BERT-based baselines. The next stage adds categories for specific
-                        customer concerns and evaluates how reliably the model recognizes them.</p>
-                    <h2>What this work provides</h2>
-                    <p>This is ongoing research. We have a curated dataset and model workflow, but final category-level
-                        results and business recommendations are still being validated. The intended use is to help
-                        teams spot recurring complaints and prioritize follow-up.</p>
+                    <h2>Research Problem &amp; Context</h2>
+                    <p>Tagalog-English code-switching (Taglish) dominates informal Philippine digital commerce on platforms like Shopee, yet off-the-shelf sentiment models struggle with its token-level language alternation, incentive-driven noise, and sarcasm that inverts surface polarity. Standard polarity classification fails to isolate actionable feedback for merchants.</p>
+                    
+                    <h2>Methodology &amp; Pipeline Design</h2>
+                    <p>Serving as Project Lead alongside Christian Michael Delos Santos, Ko Han Lee, and Julian Edison Yalung under adviser Bernard C. Fabro, our team curated and annotated a dataset of <strong>10,510 Taglish e-commerce reviews</strong> from Shopee.</p>
+                    <p>We engineered a rigorous two-stage classification framework: <strong>Stage 1</strong> fine-tunes <strong>XLM-RoBERTa</strong> to categorize reviews into positive, negative, neutral, and mixed sentiments. <strong>Stage 2</strong> expands negative reviews into a multi-label classification structure, capturing co-occurring operational complaints such as damaged items, late delivery, wrong items, poor product quality, and poor seller service.</p>
+                    
+                    <h2>Evaluation &amp; Metrics</h2>
+                    <p>The models are rigorously benchmarked against baseline architectures (Polyglot, VADER, mBERT, GPT-3, GPT-3.5) across classification metrics including accuracy, precision, recall, macro-F1, micro-F1, macro/micro-precision, macro/micro-recall, and hamming loss, utilizing stratified k-fold cross-validation and paired samples t-tests.</p>
                 </div>
                 <aside class="side-card reveal">
                     <h2>At a glance</h2>
-                    <div class="meta"><small class="mono">ROLE</small><strong>Project Lead · undergraduate
-                            thesis</strong></div>
-                    <div class="meta"><small class="mono">TIMELINE</small><strong>Feb 2026–present</strong></div>
+                    <div class="meta"><small class="mono">ROLE</small><strong>Project Lead · Undergraduate Thesis (UST CICS)</strong></div>
+                    <div class="meta"><small class="mono">TIMELINE</small><strong>Feb 2026 – Present (Expected April 2026)</strong></div>
                     <h2>Highlights</h2>
                     <ul>
-                        <li>Curated and annotated a 10K+ Taglish review dataset with a team.</li>
-                        <li>Working with code-switching and ambiguous customer language.</li>
-                        <li>Fine-tuning XLM-RoBERTa and comparing baseline models.</li>
-                        <li>Tracking precision, recall, and F1 rather than claiming unverified performance.</li>
+                        <li>Curated and annotated 10,510+ Taglish Shopee review corpus.</li>
+                        <li>Designed a two-stage noise-filtering and multi-label complaint pipeline.</li>
+                        <li>Fine-tuning XLM-RoBERTa against multilingual BERT and LLM baselines.</li>
+                        <li>Rigorous statistical evaluation using macro-F1, hamming loss, and paired t-tests.</li>
                     </ul>
                 </aside>
             </div>
-            <nav class="next-nav mono" aria-label="Project navigation"><a href="../index.html#projects"> Back to all
-                    projects</a><a href="shopzada.html">Next: ShopZada Data Warehouse </a></nav>
+            <nav class="next-nav mono" aria-label="Project navigation">
+                <a href="../index.html#projects">← Back to all projects</a>
+                <a href="shopzada.html">Next: ShopZada Data Warehouse →</a>
+            </nav>
         </div>
     </main>
     <footer class="footer">
-        <div class="wrap"><span>© 2026 Austin Concepcion · </span>
-            <div class="socials mono"><a href="https://github.com/Craezyyy" target="_blank"
-                    rel="noopener noreferrer">GitHub</a><a
-                    href="mailto:concepcionraymondaustin@gmail.com">concepcionraymondaustin@gmail.com</a><a
-                    href="https://www.linkedin.com/in/raymond-austin-concepcion-46b684326/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a><a href="../index.html#top">Back to top </a></div>
+        <div class="wrap">
+            <span>© 2026 Austin Concepcion</span>
+            <div class="socials mono">
+                <a href="https://github.com/Craezyyy" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/raymond-austin-concepcion-46b684326/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="../index.html#top">Back to top</a>
+            </div>
         </div>
     </footer>
 </body>
